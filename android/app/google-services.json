@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "339692191873",
+    "project_id": "fruit-hup-editted",
+    "storage_bucket": "fruit-hup-editted.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339692191873:android:570539ace573fb6d1a0d80",
+        "android_client_info": {
+          "package_name": "com.example.fruit_hup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339692191873-0dkt2egk98dqbktbe4ae0kb8d3se19fn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fruit_hup",
+            "certificate_hash": "8ef7519ed11a6b48ad45f6cfa2a41d55b0f7ca04"
+          }
+        },
+        {
+          "client_id": "339692191873-l0vmtmros2tgmn8r2sh9hg5p4n0addj2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fruit_hup",
+            "certificate_hash": "18b397852b4599763abf8529176d1767aee2b812"
+          }
+        },
+        {
+          "client_id": "339692191873-4alvrfe2ee0im760hv53bg79mbnkrci5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA62maVyshXiUYkzYtZ1_8RZLKPUYhqQCs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339692191873-4alvrfe2ee0im760hv53bg79mbnkrci5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "339692191873-dbe6j2b7vjn5g54tc7hrsatnhlov96hk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fruithuppractise"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339692191873:android:8ec6e2fa581204841a0d80",
+        "android_client_info": {
+          "package_name": "com.example.fruithuppractise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339692191873-4alvrfe2ee0im760hv53bg79mbnkrci5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA62maVyshXiUYkzYtZ1_8RZLKPUYhqQCs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339692191873-4alvrfe2ee0im760hv53bg79mbnkrci5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "339692191873-dbe6j2b7vjn5g54tc7hrsatnhlov96hk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fruithuppractise"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

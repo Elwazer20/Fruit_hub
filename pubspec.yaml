@@ -1,0 +1,66 @@
+name: fruit_hup
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.1
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.19.0
+  intl_utils: ^2.8.10
+  cupertino_icons: ^1.0.8
+  flutter_launcher_icons: ^0.14.3
+  dots_indicator: ^4.0.1
+  dartz: ^0.10.1
+  flutter_bloc: ^9.1.1
+  equatable: ^2.0.7
+  get_it: ^8.0.3
+  launcher_name: ^1.0.2
+  firebase_core: ^3.13.0
+  modal_progress_hud_nsn: ^0.5.1
+  device_preview: ^1.2.0
+  google_fonts: ^6.2.1
+  shared_preferences: ^2.5.3
+  svg_flutter: ^0.0.1
+  firebase_auth: ^5.5.3
+  flutter_native_splash: ^2.4.6
+  google_sign_in: ^6.3.0
+  flutter_facebook_auth: ^7.1.2
+  flutter_svg_provider: ^1.0.7
+  cloud_firestore: ^5.6.7
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  generate: true
+  uses-material-design: true
+
+  assets:
+    - assets/images/splash_images/
+    - assets/images/on_boarding_image/
+    - assets/images/login/
+    - assets/images/signup/
+    - assets/
+    - assets/images/
+    - assets/images/profile_image.png
+    - assets/vuesax/
+    - assets/vuesax/bold/
+    - assets/vuesax/outline/
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app_icon.png"
+  min_sdk_android: 21
+
+launcher_name:
+  default: "Fruit Hup"
+flutter_intl:
+  enabled: true
