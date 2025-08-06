@@ -47,7 +47,7 @@ class FruitHup extends StatelessWidget {
           child: DevicePreview.appBuilder(context, child),
         );
       },
-      locale: const Locale('ar'), // جعل اللغة العربية افتراضية
+      locale: const Locale('ar'),
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
