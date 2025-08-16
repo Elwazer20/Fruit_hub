@@ -29,9 +29,9 @@
 
 ## 📸 Screenshots
 
-| Splash Screen | Home Screen | Sign-Up Screen | Login Screen |
+| Splash Screen | Login Screen| Sign-Up Screen | Home Screen |
 |---------------|-------------|----------------|---------------|
-| ![Splash](assets/screenshots/splash.png) | ![Home](assets/screenshots/home.png) | ![Signup](assets/screenshots/signup.png) | ![Login](assets/screenshots/login.png) |
+| ![Splash](assets/screenshots/splash.png) | ![Login](assets/screenshots/login.png) | ![Signup](assets/screenshots/signup.png) |  ![Home](assets/screenshots/home.png)|
 
 ---
 
@@ -205,3 +205,4 @@ This project is licensed under the **MIT License** - see the LICENSE file for de
 ## 💬 Support
 
 For support, please open an issue in the GitHub repository 📢.
+
