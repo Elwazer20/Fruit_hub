@@ -22,13 +22,9 @@ class LoginView extends StatelessWidget {
       ),
       child: Scaffold(
         appBar: buildAppBar(
-          icon: Icon(
-            Icons.arrow_back_ios_new,
-            color: Colors.white,
-          ),
+
           context,
           title: "تسجيل الدخول",
-          onPressed: () {},
         ),
         body: SignInViewBodyBlocConsumer(),
       ),

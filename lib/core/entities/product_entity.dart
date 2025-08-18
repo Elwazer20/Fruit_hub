@@ -8,12 +8,11 @@ class ProductEntity {
   final String code;
   final String description;
   final num price;
-  final File image;
   final bool isFeatured;
    String? imageUrl;
-   final int? expirationMonths;
+   final int? expirationsMonths;
    final bool isOrganic;
-   final int? numOfCalories;
+   final int? numberOfCalories;
    final int? unitAmount;
    final num averageRating=0;
    final num ratingCount=0;
@@ -25,8 +24,8 @@ class ProductEntity {
   ProductEntity({
     required this.reviews,
      this.isOrganic=false,
-    required this.expirationMonths,
-    required this.numOfCalories,
+    required this.expirationsMonths,
+    required this.numberOfCalories,
     required this.unitAmount,
       this.imageUrl,
     required this.isFeatured,
@@ -34,7 +33,6 @@ class ProductEntity {
     required this.name,
     required this.description,
     required this.price,
-    required this.image,
 
   });
 

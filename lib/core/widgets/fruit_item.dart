@@ -3,11 +3,13 @@ import 'package:fruit_hup/core/utils/app_color.dart';
 import 'package:fruit_hup/generated/Assets.dart';
 import 'package:svg_flutter/svg.dart';
 
+import '../../Features/home/presentation/widgets/custom_network_image.dart';
+import '../entities/product_entity.dart';
 import '../utils/app_text_styles.dart';
 
 class FruitItem extends StatelessWidget {
-  const FruitItem({super.key});
-
+  const FruitItem({super.key , required this.productEntity});
+final ProductEntity productEntity ;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -35,15 +37,20 @@ class FruitItem extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Image.asset(
-                  Assets.imagesWatermelonTest,
+                productEntity.imageUrl != null ?    Flexible(
+                  child: CustomNetworkImage(imageUrl: productEntity.imageUrl!,),
+                ) :  Container(
+
+                  width: 100,
+                  height: 100,
+                  color: Colors.grey,
                 ),
                 const SizedBox(
                   height: 24,
                 ),
                 ListTile(
                   title: Text(
-                    'بطيخ',
+                    productEntity.name,
                     textAlign: TextAlign.right,
                     style: TextStyles.semiBold16,
                   ),
@@ -51,7 +58,7 @@ class FruitItem extends StatelessWidget {
                     TextSpan(
                       children: [
                         TextSpan(
-                          text: '30 جنية ',
+                          text: '${productEntity.price} جنيه ',
                           style: TextStyles.bold13.copyWith(
                             color: AppColors.secondaryColor,
                           ),
@@ -69,7 +76,7 @@ class FruitItem extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: 'الكيلو',
+                          text: 'كيلو',
                           style: TextStyles.semiBold13.copyWith(
                             color: AppColors.lightSecondaryColor,
                           ),

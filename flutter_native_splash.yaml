@@ -4,6 +4,8 @@ flutter_native_splash:
   color_dark: "#24C504"  # ✅ Dark mode background (متناسب مع اللوجو)
   image_dark: assets/images/splash_images/splash.png
   fullscreen: true
+  gravity: fill
+
   android_12:
     image: assets/images/splash_images/splash12.png
     icon_background_color: "#FFF9EC"

@@ -4,11 +4,12 @@ import 'database_service.dart';
 
 class FireStoreService implements DatabaseService {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
+
   @override
   Future<void> addData(
       {required String path,
-        required Map<String, dynamic> data,
-        String? documentId}) async {
+      required Map<String, dynamic> data,
+      String? documentId}) async {
     if (documentId != null) {
       firestore.collection(path).doc(documentId).set(data);
     } else {
@@ -17,10 +18,33 @@ class FireStoreService implements DatabaseService {
   }
 
   @override
-  Future<Map<String, dynamic>> getData(
-      {required String path, required String docuementId}) async {
-    var data = await firestore.collection(path).doc(docuementId).get();
-    return data.data() as Map<String, dynamic>;
+  Future<dynamic> getData(
+      {required String path,
+      String? docuementId,
+      Map<String, dynamic>? query}) async {
+    if (docuementId != null) {
+      var data = await firestore.collection(path).doc(docuementId).get();
+      return data.data() as Map<String, dynamic>;
+    } else {
+      Query<Map<String, dynamic>> data =  firestore.collection(path);
+      if (query != null) {
+        if (query['orderBy'] != null) {
+          var orderByField = query['orderBy'];
+          var descending = query['descending'];
+          data = data.orderBy(orderByField, descending: descending);
+        }
+        if (query['limit'] != null) {
+          var limit = query['limit'];
+          data = data.limit(limit);
+        }
+      }
+      var result = await data.get();
+      return result.docs
+          .map(
+            (doc) => doc.data(),
+          )
+          .toList();
+    }
   }
 
   @override

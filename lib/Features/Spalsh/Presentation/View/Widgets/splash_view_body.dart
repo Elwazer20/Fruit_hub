@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:fruit_hup/Features/home/presentation/views/home_view.dart';
+import 'package:fruit_hup/Features/home/presentation/views/main_view.dart';
 import 'package:fruit_hup/core/services/firebase_auth_service.dart';
 import 'package:fruit_hup/core/services/shared_preferances.dart';
 import 'package:fruit_hup/generated/Assets.dart';

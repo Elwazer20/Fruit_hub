@@ -11,7 +11,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'Features/Spalsh/Presentation/View/splash_view.dart';
 import 'Features/auth/presentation/views/signin_view.dart';
-import 'Features/home/presentation/views/home_view.dart';
+import 'Features/home/presentation/views/main_view.dart';
 import 'core/helper_func/on_generate_route.dart';
 import 'core/services/custom_bloc_observer.dart';
 import 'core/services/shared_preferances.dart';
@@ -61,7 +61,7 @@ class FruitHup extends StatelessWidget {
       supportedLocales: S.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerateRoute,
-      initialRoute:FirebaseAuth.instance.currentUser != null ? HomeView.routeName : LoginView.routeName,
+      initialRoute:FirebaseAuth.instance.currentUser != null ? MainView.routeName : LoginView.routeName,
     );
   }
 }

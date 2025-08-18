@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import '../../../../../core/helper_func/build_error_bar.dart';
-import '../../../../home/presentation/views/home_view.dart';
+import '../../../../home/presentation/views/main_view.dart';
 import '../../cubits/sign_in_cubit.dart';
 import 'signin_view_body.dart';
 
@@ -26,7 +26,7 @@ class SignInViewBodyBlocConsumer extends StatelessWidget {
             "You are logged in successfully",
             context,
           );
-          Navigator.pushNamed(context, HomeView.routeName);
+          Navigator.pushNamed(context, MainView.routeName);
         }
       },
       builder: (context, state) {

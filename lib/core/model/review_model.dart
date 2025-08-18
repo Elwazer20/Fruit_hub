@@ -24,7 +24,15 @@ class ReviewModel {
       'reviewDescription': reviewDescription,
     };
   }
-
+ReviewEntity toEntity() {
+    return ReviewEntity(
+      name: name,
+      image: image,
+      ratting: ratting,
+      date: date,
+      reviewDescription: reviewDescription,
+    );
+  }
   factory ReviewModel.fromEntity(ReviewEntity reviewEntity) {
     return ReviewModel(
       name: reviewEntity.name,

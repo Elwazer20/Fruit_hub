@@ -21,9 +21,6 @@ class SignupView extends StatelessWidget {
         appBar: buildAppBar(
           context,
           title: 'حساب جديد',
-          onPressed: () {
-            Navigator.pop(context);
-          },
         ),
         body: SignupViewBodyBlocBuilder(),
       ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/app_text_styles.dart';
-import '../../../../core/widgets/build_app_bar.dart';
+import '../../../../core/widgets/custom_app_bar.dart';
 import '../../../home/presentation/widgets/notification_widget.dart';
 
 class BestSellingViewBody extends StatelessWidget {
@@ -10,7 +10,13 @@ class BestSellingViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(context),
+      appBar: buildAppBar(
+        title: "الأكثر مبيعا",
+        context,
+
+
+
+      ),
     );
   }
 }

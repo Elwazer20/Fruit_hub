@@ -23,11 +23,9 @@ class BottomNavigationBarEntity {
     BottomNavigationBarEntity(
       activeImage: Assets.boldShoppingCart,
       inactiveImage: Assets.outlineShoppingCart,
-
       name: 'سله التسوق',
     ),
     BottomNavigationBarEntity(
-
       activeImage: Assets.boldUser,
       inactiveImage: Assets.outlineUser,
       name: 'حسابي',
