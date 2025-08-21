@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hup/Features/auth/presentation/views/widgets/terms_and_conditions.dart';
-import 'package:fruit_hup/core/helper_func/build_error_bar.dart';
 import '../../../../../../constants/constants.dart';
 import '../../../../../../core/widgets/custom_button.dart';
 import '../../../../../../core/widgets/custom_text_field.dart';
 import '../../../../../core/widgets/password_field.dart';
+import '../../../../../core/widgets/scaffold_messenger.dart';
 import '../../cubits/sign_up_cubit.dart';
 import 'have_an_account_widget.dart';
 
@@ -75,14 +75,18 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
                     if (isTermsAccepted) {
-                      context.read<SignUpCubit>().createUserWithEmailAndPassword(
+                      context
+                          .read<SignUpCubit>()
+                          .createUserWithEmailAndPassword(
                         email: email,
                         password: password,
                         name: userName,
 
                       );
                     } else {
-                      scaffoldMessengerBar('يرجى قبول الشروط والاحكام', context);
+                      CustomScaffoldMessenger.showErrorMessenger(
+                          message: 'يرجى قبول الشروط والاحكام',
+                          context: context);
                     }
                   } else {
                     setState(() {

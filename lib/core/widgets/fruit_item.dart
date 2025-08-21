@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hup/core/utils/app_color.dart';
 import 'package:fruit_hup/generated/Assets.dart';
 import 'package:svg_flutter/svg.dart';
 
+import '../../Features/home/presentation/cubit/cart_cubit.dart';
 import '../../Features/home/presentation/widgets/custom_network_image.dart';
 import '../entities/product_entity.dart';
 import '../utils/app_text_styles.dart';
@@ -85,11 +87,16 @@ final ProductEntity productEntity ;
                     ),
                     textAlign: TextAlign.right,
                   ),
-                  trailing: const CircleAvatar(
-                    backgroundColor: AppColors.primaryColor,
-                    child: Icon(
-                      Icons.add,
-                      color: Colors.white,
+                  trailing: GestureDetector(
+                    onTap: (){
+                      context.read<CartCubit>().addProduct(productEntity);
+                    },
+                    child: const CircleAvatar(
+                      backgroundColor: AppColors.primaryColor,
+                      child: Icon(
+                        Icons.add,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),

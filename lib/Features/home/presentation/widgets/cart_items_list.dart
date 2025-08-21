@@ -6,7 +6,7 @@ import 'cart_item.dart';
 
 class CartItemsList extends StatelessWidget {
   const CartItemsList({required this.cartItems, super.key});
-final List<CartItemEntity> cartItems ;
+final List<CarItemEntity> cartItems ;
   @override
   Widget build(BuildContext context) {
     return SliverList.separated(

@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import '../../Features/home/presentation/widgets/notification_widget.dart';
 import '../utils/app_text_styles.dart';
 
-AppBar buildAppBar(context, {required String title , bool showBackButton = true , bool showNotification = true}) {
+AppBar buildAppBar(context, {required String title ,
+  bool showBackButton = true , bool showNotification = true}) {
   return AppBar(
     backgroundColor: Colors.white,
     actions:  [
