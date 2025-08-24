@@ -2,14 +2,14 @@ import '../../../../core/entities/product_entity.dart';
 import 'cart_item_entity.dart';
 
 class CartEntity  {
-  List<CarItemEntity> carItems;
+  List<CartItemEntity> carItems;
 
   CartEntity({required this.carItems});
 
-  addCartItem(CarItemEntity cartItem) {
+  addCartItem(CartItemEntity cartItem) {
     carItems.add(cartItem);
   }
-  removeCartItem(CarItemEntity cartItem) {
+  removeCartItem(CartItemEntity cartItem) {
     carItems.remove(cartItem);
   }
 double getTotalPrice() {
@@ -28,13 +28,13 @@ double getTotalPrice() {
     }
     return false;
   }
-CarItemEntity getCartItem(ProductEntity product) {
+CartItemEntity getCartItem(ProductEntity product) {
     for (var cartItem in carItems) {
       if (cartItem.productEntity == product) {
         return cartItem;
       }
     }
-    return CarItemEntity(productEntity: product, count: 1);
+    return CartItemEntity(productEntity: product, count: 1);
   }
 
 }

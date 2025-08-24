@@ -2,11 +2,11 @@ import 'package:equatable/equatable.dart';
 
 import '../../../../core/entities/product_entity.dart';
 
-class CarItemEntity extends Equatable {
+class CartItemEntity extends Equatable {
   final ProductEntity productEntity;
   int count;
 
-  CarItemEntity({required this.productEntity, this.count = 0});
+  CartItemEntity({required this.productEntity, this.count = 0});
 
   num toTalPrice() => productEntity.price * count;
 

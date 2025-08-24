@@ -14,7 +14,7 @@ import 'custom_network_image.dart';
 class CartItem extends StatelessWidget {
   const CartItem({super.key, required this.cartItem});
 
-  final CarItemEntity cartItem;
+  final CartItemEntity cartItem;
 
   @override
   Widget build(BuildContext context) {

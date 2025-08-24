@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hup/Features/checkout/presentation/widgets/checkout_page_view.dart';
 import 'package:fruit_hup/Features/checkout/presentation/widgets/checkout_steps.dart';
-import 'package:fruit_hup/core/widgets/custom_app_bar.dart';
 import 'package:fruit_hup/core/widgets/custom_button.dart';
 
-import 'active_step_item.dart';
-import 'inactive_step_item.dart';
 
 class CheckoutViewBody extends StatefulWidget {
   const CheckoutViewBody({super.key});
@@ -15,19 +12,28 @@ class CheckoutViewBody extends StatefulWidget {
 }
 
 class _CheckoutViewBodyState extends State<CheckoutViewBody> {
-  late PageController pageController ;
+  late PageController pageController;
+
   @override
   initState() {
     pageController = PageController(initialPage: 0);
+    pageController.addListener(() {
+      setState(() {
+        currentPageIndex = pageController.page!.toInt();
+      });
+    });
     super.initState();
   }
+
   @override
   void dispose() {
-
     pageController.dispose();
     // TODO: implement dispose
     super.dispose();
   }
+
+  int currentPageIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -37,19 +43,34 @@ class _CheckoutViewBodyState extends State<CheckoutViewBody> {
           const SizedBox(
             height: 20,
           ),
-          CheckoutSteps(),
+          CheckoutSteps(
+            currentPageIndex: currentPageIndex,
+            pageController: pageController ,
+          ),
           Expanded(
             child: CheckoutStepsPageView(
               pageController: pageController,
             ),
           ),
-          CustomButton(onPressed: (){}, text: 'التالي')
-          ,SizedBox(
+          CustomButton(
+              onPressed: () {
+                pageController.animateToPage(currentPageIndex + 1,
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeInOut);
+              },
+              text: getNextButtonText(currentPageIndex),
+          ),
+          SizedBox(
             height: 30,
           ),
         ],
       ),
     );
   }
+  String getNextButtonText(int currentPageIndex) {
+    if (currentPageIndex == 2) {
+      return ' الدفع عبر PayPal   ';
+    }
+    return 'التالي';
+  }
 }
-

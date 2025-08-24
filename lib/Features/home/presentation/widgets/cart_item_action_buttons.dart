@@ -8,7 +8,7 @@ import '../cubit/cart_item/cart_item_cubit.dart';
 
 class CartItemActionButtons extends StatelessWidget {
   const CartItemActionButtons({required this.cartItem, super.key});
-final CarItemEntity cartItem;
+final CartItemEntity cartItem;
   @override
   Widget build(BuildContext context) {
     return Row(

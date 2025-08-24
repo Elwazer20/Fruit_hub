@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hup/Features/checkout/presentation/widgets/paytment_section.dart';
 import 'package:fruit_hup/Features/checkout/presentation/widgets/shipping_section.dart';
 
+import 'address_input_section.dart';
 import 'checkout_steps.dart';
 
 class CheckoutStepsPageView extends StatelessWidget {
@@ -29,9 +31,8 @@ class CheckoutStepsPageView extends StatelessWidget {
   List<Widget> getPages() {
     return [
       const ShippingSection(),
-      const SizedBox(),
-      const SizedBox(),
-      const SizedBox(),
+      const AddressInputSection(),
+      const PaymentSection(),
     ];
   }
 }

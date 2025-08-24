@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruit_hup/core/widgets/scaffold_messenger.dart';
 
 import '../../../../../core/widgets/custom_button.dart';
 import '../../../checkout/presentation/views/checkout_view.dart';
@@ -17,10 +18,16 @@ class CustomCartButton extends StatelessWidget {
       builder: (context, state) {
         return CustomButton(
           onPressed: () {
-            Navigator.pushNamed(context, CheckoutView.routeName);
+            if (context.watch<CartCubit>().cartEntity.carItems.isNotEmpty) {
+              Navigator.pushNamed(context, CheckoutView.routeName,
+                  arguments: context.watch<CartCubit>().cartEntity.carItems);
+            } else {
+              CustomScaffoldMessenger.showErrorMessenger(
+                  context: context, message: "السلة فارغة");
+            }
           },
           text:
-          'الدفع  ${context.watch<CartCubit>().cartEntity.getTotalPrice()} جنيه',
+              'الدفع  ${context.watch<CartCubit>().cartEntity.getTotalPrice()} جنيه',
         );
       },
     );
